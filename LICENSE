@@ -19,13 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This MIT license covers the CODE in this repository only.
-
-The paper is published by the Eurographics Association under CC BY 4.0:
-https://creativecommons.org/licenses/by/4.0/
-
-The CT dataset is archived on Zenodo under CC BY 4.0:
-https://doi.org/10.5281/zenodo.22822228

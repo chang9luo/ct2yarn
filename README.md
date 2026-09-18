@@ -248,6 +248,9 @@ Takes a centerline npz or an exported `yarn_plies_v1` npz. Falls back to CPU wit
 | Paper | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), Eurographics Association |
 | Dataset | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) on Zenodo |
 
+The MIT licence in [LICENSE](./LICENSE) covers the code in this repository only. The paper
+and the dataset keep their own terms as listed above.
+
 <img src='https://diglib.eg.org/assets/eg/images/creativecommons/cc-by.png'/>
 
 ## Reference
