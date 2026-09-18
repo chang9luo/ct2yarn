@@ -101,7 +101,8 @@ python download_data.py --check            # see what is already on disk
 you install anything, and it resumes an interrupted download rather than starting over.
 
 If you only want to try the reconstruction, take the processed set. It is a tenth of the
-size and the pipeline picks up from there.
+size, the pipeline picks up from there, and the GitHub CDN is much faster than the Zenodo
+one, so the whole 2.27 GB arrives in a couple of minutes.
 
 The NRRD volumes open directly in [3D Slicer](https://www.slicer.org/) if you want to look
 at the raw or processed scans before running anything.
