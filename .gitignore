@@ -1,0 +1,13 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Polyscope and ImGui write these next to whatever directory you launch from.
+# They are per-machine window layouts, not project settings.
+imgui.ini
+.polyscope.ini
+
+# Editor and OS noise
+.DS_Store
+*.swp

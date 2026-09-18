@@ -1,0 +1,5 @@
+[
+  {"name": "chain",     "npy": "C_chain_stiches_curves_before_template_3927_4288.npy",     "color": [0.93, 0.49, 0.19]},
+  {"name": "two_loose", "npy": "two_loose_curves_gt_template_5973_6508.npy",               "color": [0.30, 0.69, 0.31]},
+  {"name": "single",    "npy": "single_stiches_patch1_curves_gt_template_10913_11726.npy", "color": [0.21, 0.49, 0.86]}
+]

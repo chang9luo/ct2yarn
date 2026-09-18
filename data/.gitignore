@@ -1,0 +1,18 @@
+# The CT volumes and point clouds are distributed separately (see the README),
+# they are far past GitHub's per-file limit.
+*.nrrd
+*.npz
+
+# Everything else under data/ is produced by running the pipeline: diagnostic
+# figures, per-run logs and the yaml written by v1. Some of the logs record
+# absolute paths from the machine that produced them, so they are not shipped.
+figs/
+log/
+params/
+diameter_figs/
+
+# Keep the folder layout itself.
+!.gitignore
+
+# Preserve the empty stage folders so the scripts find them on a fresh clone.
+!.gitkeep
