@@ -155,73 +155,32 @@ Bézier path with control handles or as a freehand sketch stroke.
 
 ![applications](./imgs/applications.jpg)
 
-The recovered centerline feeds three downstream uses, all included here.
+The recovered centerline is a plain polyline, so it feeds straight into downstream uses.
 
-### Ply-level procedural yarn
-
-![plies](./imgs/gif/plies.gif)
-
-[`applications/yarn_plies.py`](./applications/yarn_plies.py) wraps the centerline with the
-coaxial-helix ply model of Zhao et al. 2016. `--pitch` is the arc length of one revolution,
-`--radius` the ply offset.
+| Ply-level yarn | Physics simulation | Stitch extraction |
+| :--: | :--: | :--: |
+| ![plies](./imgs/gif/plies.gif) | ![simulation](./imgs/gif/sim.gif) | ![stitches](./imgs/gif/stitches.gif) |
+| A centerline carries no thickness, so we wrap it with the coaxial-helix ply model of Zhao et al. 2016 and render that in Mitsuba 3. | The centerline is treated as a discrete elastic rod and integrated under gravity and self-contact. Here P, G, 2 and 6 fall into a glass bowl. | The path is split into an ordered sequence of stitches, each labelled by Kabsch alignment against a small template library. |
+| [`yarn_plies.py`](./applications/yarn_plies.py)<br>[`yarn_render.py`](./applications/yarn_render.py) | [`yarn_sim_der.py`](./applications/yarn_sim_der.py) | [`yarn_stitches.py`](./applications/yarn_stitches.py) |
 
 ```bash
-python applications/yarn_plies.py output/<stem>/curves/yarn_latest.npz
-python applications/yarn_plies.py <yarn.npz> --n_plies 3 --pitch 80 --radius 12 --export
-```
+# ply geometry, live sliders in a Polyscope viewer, then render it
+python applications/yarn_plies.py output/<stem>/curves/yarn_latest.npz --export
+python applications/yarn_render.py <yarn.npz> --fibers --spp 256 --out render.png
 
-Opens a Polyscope viewer with live sliders. `--export` writes `yarn_plies_<ts>.npz` and an
-`.obj`, `--fibers` splits plies into fibers, `--fly` adds flyaway hairs. Input is what the
-GUI's `Save yarn` writes, no conversion needed.
-
-### Physics simulation
-
-![simulation](./imgs/gif/sim.gif)
-
-[`applications/yarn_sim_der.py`](./applications/yarn_sim_der.py) simulates the centerline as
-a discrete elastic rod (Bergou et al. 2008) with linearly-implicit Euler. Only the
-centerline is simulated, so a frame is rendered by re-running the ply decoration on the
-deformed curve.
-
-```bash
+# drop onto a plane, or into the glass bowl whose SDF ships in applications/assets/
 python applications/yarn_sim_der.py <yarn.npz> --mode drop --frames 300
 python applications/yarn_sim_der.py <combined.npz> --mode bowl --gravity -3500 \
     --bowl_sdf applications/assets/glassbowl_sdf.npz --ground 0 --lift 0
-```
 
-`--mode drop` falls onto a ground plane, `--mode bowl` collides against a baked SDF. The
-teaser above drops the four PG2026 letters into a glass bowl, whose SDF ships in
-`applications/assets/`.
-
-### Stitch pattern extraction
-
-![stitches](./imgs/gif/stitches.gif)
-
-[`applications/yarn_stitches.py`](./applications/yarn_stitches.py) decomposes the
-centerline into an ordered sequence of stitches. It computes arc-length curvature and its
-autocorrelation to find candidate stitch periods, then labels each candidate by Kabsch
-alignment against a small template library, taking the type of smallest RMSD and sliding the
-boundary to the best fit.
-
-```bash
+# stitch pattern, templates default to applications/assets/stitch_templates/
 python applications/yarn_stitches.py --npz output/<stem>/curves/yarn_latest.npz
 ```
 
-The three canonical templates (chain, single, and a loose variant) ship in
-`applications/assets/stitch_templates/`, and `--stitch_templates` points at a different
-library. The viewer also exports a matched span with its camera for figure work.
-
-### Rendering
-
-[`applications/yarn_render.py`](./applications/yarn_render.py) renders it in Mitsuba 3,
-fibers as `linearcurve` primitives and plies as swept tubes.
-
-```bash
-python applications/yarn_render.py <yarn.npz> --fibers --spp 256 --out render.png
-python applications/yarn_render.py <yarn_plies_v1.npz> --bsdf hair --rainbow
-```
-
-Takes a centerline npz or an exported `yarn_plies_v1` npz. Falls back to CPU without a GPU.
+Input everywhere is the npz that the GUI's `Save yarn` writes, so no conversion is needed.
+`yarn_plies.py` takes `--n_plies`, `--pitch` (arc length of one revolution) and `--radius`
+(ply offset), and `--fibers` splits each ply into fibers. `yarn_render.py` also accepts an
+exported `yarn_plies_v1` npz and falls back to the CPU without a GPU.
 
 ## Citation
 ```
