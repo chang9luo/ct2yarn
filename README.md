@@ -9,14 +9,14 @@ The University of Tokyo <br>
 
 <a href="https://arxiv.org/abs/2609.06950"><img src='https://img.shields.io/badge/arXiv-CT2Yarn 🧶-firebrick?logo=arxiv' alt='Arxiv'></a>
 <a href="./pdf/paper.pdf"><img src='https://img.shields.io/badge/PDF-CT2Yarn 🧶-orange?logo=googledocs&logoColor=white' alt='PDF'></a>
-<a href='#'><img src='https://img.shields.io/badge/Project_Page-CT2Yarn 🧶-green?logo=googlechrome&logoColor=white' alt='Project Page'></a>
+<a href='https://netbeifeng.github.io/CT2Yarn/'><img src='https://img.shields.io/badge/Project_Page-CT2Yarn 🧶-green?logo=googlechrome&logoColor=white' alt='Project Page'></a>
 <a href='#'><img src='https://img.shields.io/badge/Video-CT2Yarn 🧶-red?logo=youtube' alt='Youtube Video'></a>
 <a href='https://doi.org/10.5281/zenodo.22822228'><img src='https://img.shields.io/badge/Dataset-CT2Yarn 🧶-1682D4?logo=zenodo&logoColor=white' alt='Dataset on Zenodo'></a>
 </div>
 
 [\[Arxiv\]](https://arxiv.org/abs/2609.06950)
 [\[Paper\]](./pdf/paper.pdf)
-[\[Project Page\]](#)
+[\[Project Page\]](https://netbeifeng.github.io/CT2Yarn/)
 [\[Video\]](#)
 [\[Dataset\]](https://doi.org/10.5281/zenodo.22822228)
 
