@@ -32,7 +32,7 @@ import urllib.request
 RECORD = '22822228'
 API = f'https://zenodo.org/api/records/{RECORD}'
 DOI = 'https://doi.org/10.5281/zenodo.22822228'
-REPO = 'netbeifeng/ct2yarn'
+REPO = 'chang9luo/ct2yarn'
 TAG = 'data-processed-v1'
 REL_API = f'https://api.github.com/repos/{REPO}/releases/tags/{TAG}'
 HERE = os.path.dirname(os.path.abspath(__file__))

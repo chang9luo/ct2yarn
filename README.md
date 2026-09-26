@@ -1,7 +1,7 @@
 <div align="center">
 <h2>🧶 CT2Yarn: Yarn-Level Reconstruction of Crochet from Computed Tomography (PG2026)</h2>
 
-[**Chang Luo**](http://netbeifeng.github.io/) · [**Nobuyuki Umetani**](https://cgenglab.github.io/en/authors/admin/)
+[**Chang Luo**](http://chang9luo.github.io/) · [**Nobuyuki Umetani**](https://cgenglab.github.io/en/authors/admin/)
 
 The University of Tokyo <br>
 
@@ -9,14 +9,14 @@ The University of Tokyo <br>
 
 <a href="https://arxiv.org/abs/2609.06950"><img src='https://img.shields.io/badge/arXiv-CT2Yarn 🧶-firebrick?logo=arxiv' alt='Arxiv'></a>
 <a href="./pdf/paper.pdf"><img src='https://img.shields.io/badge/PDF-CT2Yarn 🧶-orange?logo=googledocs&logoColor=white' alt='PDF'></a>
-<a href='https://netbeifeng.github.io/CT2Yarn/'><img src='https://img.shields.io/badge/Project_Page-CT2Yarn 🧶-green?logo=googlechrome&logoColor=white' alt='Project Page'></a>
+<a href='https://chang9luo.github.io/CT2Yarn/'><img src='https://img.shields.io/badge/Project_Page-CT2Yarn 🧶-green?logo=googlechrome&logoColor=white' alt='Project Page'></a>
 <a href='https://www.youtube.com/watch?v=CWyazq2m4Yo'><img src='https://img.shields.io/badge/Video-CT2Yarn 🧶-red?logo=youtube' alt='Youtube Video'></a>
 <a href='https://doi.org/10.5281/zenodo.22822228'><img src='https://img.shields.io/badge/Dataset-CT2Yarn 🧶-1682D4?logo=zenodo&logoColor=white' alt='Dataset on Zenodo'></a>
 </div>
 
 [\[Arxiv\]](https://arxiv.org/abs/2609.06950)
 [\[Paper\]](./pdf/paper.pdf)
-[\[Project Page\]](https://netbeifeng.github.io/CT2Yarn/)
+[\[Project Page\]](https://chang9luo.github.io/CT2Yarn/)
 [\[Video\]](https://www.youtube.com/watch?v=CWyazq2m4Yo)
 [\[Dataset\]](https://doi.org/10.5281/zenodo.22822228)
 
